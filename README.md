@@ -30,6 +30,7 @@ $ cd <any folder you want this repository to go to>
 $ git clone <paste the copied link>
 ```
 ## Deploy:
-
+https://madilyncooper.github.io/password_generator/
 
  ## Screenshot:
+<img width="906" alt="Screen Shot 2023-03-13 at 9 51 21 PM" src="https://user-images.githubusercontent.com/124405920/224896498-de4d6821-8bd4-4602-921a-0b1d92ffa528.png">
