@@ -87,139 +87,155 @@ var specialCharactersArr = [
   '.',
 ];
 
-// var lengthOfPassword = parseInt(window.prompt('Password length: '));
+ var resultLength = [];
 
+var resultOne = [];
 
-// console.log(lengthOfPassword);
-// console.log(typeof lengthOfPassword);
-
-function validPasswordLength() {
-
-  var lengthOfPassword = parseInt(window.prompt('Enter password length: '));
-  
-
-  console.log(lengthOfPassword);
-  console.log(typeof lengthOfPassword);
-
-  if (lengthOfPassword < 8 || lengthOfPassword > 128) {
-    var invalidLength = window.alert('Please enter valid password length');
-    validPasswordLength();
-  }
-
-  else if (lengthOfPassword >= 8 && lengthOfPassword <= 128) {
-    window.alert('Password length validated! You may proceed to the next prompt...');
-    return;
-  } 
-  
-  else {
-    var invalidLength = window.alert('Please enter valid password length');
-    validPasswordLength();
-  }
-
-}
-
-validPasswordLength();
-
-function passwordUpperCase () {
 
  var upperCase = window.prompt('Would you like Uppercase letters included in your password?').toLowerCase();
 
- console.log(upperCase);
- console.log(typeof upperCase);
 
  if (upperCase === 'yes') {
-  window.alert('You have chosen to include Uppercase letters. You may proceed to the next prompt... ');
- }
-
+  var upperCaseYes = window.alert('You have chosen to include Uppercase letters. You may proceed to the next prompt... ');
+ } 
  else if (upperCase === 'no') {
-  window.alert('Uppercase letters will not be included in your password. You may proceed to the next prompt...');
+  var upperCaseNo = window.alert('Uppercase letters will not be included in your password. You may proceed to the next prompt...');
+ } else {
+  var upperCaseError = window.prompt('ERROR! Please answer "yes" or "no"... ');
  }
 
- else {
-  window.alert('Please answer "yes" or "no"... ');
-  passwordUpperCase();
- }
-
-}
-
-passwordUpperCase();
+ console.log(upperCase);
+ console.log(upperCaseError);
 
 
-function passwordLowerCase () {
+
 
   var lowerCase = window.prompt('Would you like Lowercase letters included in you password?').toLowerCase();
  
-  console.log(lowerCase);
-  console.log(typeof lowerCase);
- 
-  if (lowerCase === 'yes') {
-   window.alert('You have chosen to include lowerCase letters. You may proceed to the next prompt... ');
-  }
- 
-  else if (lowerCase === 'no') {
-   window.alert('Lowercase letters will not be included in your password. You may proceed to the next prompt...');
-  }
- 
-  else {
-   window.alert('Please answer "yes" or "no"... ');
-   passwordLowerCase();
-  }
- 
- }
- 
- passwordLowerCase();
 
- function passwordSpecialChar () {
+  if (lowerCase === 'yes') {
+   var lowerCaseYes = window.alert('You have chosen to include lowerCase letters. You may proceed to the next prompt... ');
+  } 
+  else if (lowerCase === 'no') {
+   var lowerCaseNo = window.alert('Lowercase letters will not be included in your password. You may proceed to the next prompt...');
+  } else {
+  var lowerCaseError = window.prompt('ERROR! Please answer "yes" or "no"... ');
+  }
+
+ console.log(lowerCase);
+ console.log(lowerCaseError);
+
+
 
   var specialChar = window.prompt('Would you like special characters included in you password?').toLowerCase();
  
-  console.log(specialChar);
-  console.log(typeof specialChar);
- 
+
   if (specialChar === 'yes') {
-   window.alert('You have chosen to include special characters. You may proceed to the next prompt... ');
-  }
- 
+   var specialYes = window.alert('You have chosen to include special characters. You may proceed to the next prompt... ');
+  } 
   else if (specialChar === 'no') {
-   window.alert('Special characters will not be included in your password. You may proceed to the next prompt...');
-  }
- 
-  else {
-   window.alert('Please answer "yes" or "no"... ');
-   passwordSpecialChar();
-  }
- 
- }
- 
- passwordSpecialChar();
+   var specialNo = window.alert('Special characters will not be included in your password. You may proceed to the next prompt...');
+  } else {
+   var specialError = window.prompt('ERROR! Please answer "yes" or "no"... ');
+}
+
+console.log(specialChar);
+console.log(specialError);
 
 
- function passwordNumbers () {
+  var numbersPrompt = window.prompt('Would you like numbers included in you password?').toLowerCase();
+ 
 
-  var numbersPrompt = window.prompt('Would you like special characters included in you password?').toLowerCase();
- 
-  console.log(numbersPrompt);
-  console.log(typeof numbersPrompt);
- 
   if (numbersPrompt === 'yes') {
-   window.alert('You have chosen to include special characters. You may proceed to the next prompt... ');
-  }
- 
+   var numbersYes = window.alert('You have chosen to include numbers. You may proceed to the next prompt... ');
+  } 
   else if (numbersPrompt === 'no') {
-   window.alert('Special characters will not be included in your password. You may proceed to the next prompt...');
+   var numbersNo = window.alert('Numbers will not be included in your password. You may proceed to the next prompt...');
+  } else {
+   var numbersError = window.alert('ERROR! Please answer "yes" or "no"... ');
   }
+
+  console.log(numbersPrompt);
+  console.log(numbersError);
+
+
+
+
+   var lengthOfPassword = parseInt(window.prompt('Enter password length: '));
  
-  else {
-   window.alert('Please answer "yes" or "no"... ');
-   passwordNumbers();
-  }
+  if (lengthOfPassword >= 8 && lengthOfPassword <= 128) {
+   window.alert('Password length validated! You may proceed to the next prompt...');
+ } else {
+    lengthOfPassword;
+   }
+
+   console.log(lengthOfPassword);
+   console.log(typeof lengthOfPassword);
  
- }
+
+   if ((upperCase || upperCaseError) && (lowerCase || lowerCaseError) && (specialChar || specialError) && (numbersPrompt || numbersError) === 'yes') {
+    var resultAllYes = numbersArr.concat(upperCasedCharactersArr, lowerCasedCharactersArr, specialCharactersArr);
+    console.log(resultAllYes);
+   } 
+  
+   else if ((upperCase || upperCaseError) && (lowerCase || lowerCaseError) && (specialChar || specialError) && (numbersPrompt || numbersError) === 'no') {
+    window.alert('ERROR! You have chosen no criteria. Please reload browser to start again...');
+   }
+
+   
+   if (((upperCase || upperCaseError) === 'yes') && ((lowerCase || lowerCaseError) === 'no') && ((specialChar || specialError) === 'no') && ((numbersPrompt || numbersError) === 'no')) {
+    
+    for (var i = 0; i < lengthOfPassword; i++) {
  
- passwordNumbers();
+         var randomUppercase = upperCasedCharactersArr[Math.floor(Math.random() * upperCasedCharactersArr.length)];
+         resultOne.push(randomUppercase);
+         console.log(resultOne.join(''));
+       }
+   }
+
+
+//  for (var i = 0; i < (lengthOfPassword || lengthOfPasswordTwo); i++) {
+ 
+//    var randomNum = numbersArr[Math.floor(Math.random() * numbersArr.length)];
+//    resultLength.push(randomNum);
+//    console.log(resultLength.join(''));
+//  }
+
+
+
+
+  
+
+  // for (var i = 0; i < (lengthOfPassword || lengthOfPasswordTwo); i++) {
+  // var randomUpperCase = upperCasedCharactersArr[Math.floor(Math.random() * upperCasedCharactersArr.length)];
+  // resultUpperCase.push(randomUpperCase);
+  // console.log(resultUpperCase);
+  // }
+
+
+
 
  
 
+
+
+
+//
+
+//  
+ 
+//  
+ 
+
+
+
+
+
+ 
+// if ((upperCase || errorUpperCase) === 'yes') {
+//   var one = numbersArr.concat(upperCasedCharactersArr);
+//   console.log(one); 
+//   } 
 
 
 
