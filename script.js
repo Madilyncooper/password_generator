@@ -87,7 +87,7 @@ var specialCharactersArr = [
   '.',
 ];
 
-
+var resultZero = [];
 
 var resultOne = [];
 
@@ -96,6 +96,47 @@ var resultTwo = [];
 var resultThree = [];
 
 var resultFour = [];
+
+var resultFive = [];
+
+var resultSix = [];
+
+var resultSeven = [];
+
+var resultEight = [];
+
+var resultNine = [];
+
+var resultTen = [];
+
+var resultEleven = [];
+
+var resultTwelve = [];
+
+var resultThirteen = [];
+
+var resultFourteen = [];
+
+var resultFifteen = [];
+
+var resultSixteen = [];
+
+var resultSeventeen = [];
+
+
+var resultEighteen = [];
+
+var resultNineteen = [];
+
+var resultTwenty = [];
+
+var resultTwenty_one = [];
+
+var resultTwenty_two = [];
+
+var resultTwenty_three = [];
+
+var resultTwenty_four = [];
 
 
  var upperCase = window.prompt('Would you like Uppercase letters included in your password?').toLowerCase();
@@ -183,8 +224,13 @@ console.log(typeof lengthOfPassword);
 
 
 if (((upperCase || upperCaseError) === 'yes') && ((lowerCase || lowerCaseError) === 'yes') && ((specialChar || specialError) === 'yes') && ((numbersPrompt || numbersError) === 'yes')) {
-    var resultAllYes = numbersArr.concat(upperCasedCharactersArr, lowerCasedCharactersArr, specialCharactersArr);
-    console.log(resultAllYes);
+  
+  for (var i = 0; i < lengthOfPassword; i++) {
+ 
+    var resultAllYes = (numbersArr.concat(upperCasedCharactersArr, lowerCasedCharactersArr, specialCharactersArr))[Math.floor(Math.random() * 84)];
+    resultZero.push(resultAllYes);
+  }
+    var zero = console.log(resultZero.join(''));
    } 
 
   
@@ -200,8 +246,8 @@ else if (((upperCase || upperCaseError) === 'yes') && ((lowerCase || lowerCaseEr
  
          var randomUppercase = upperCasedCharactersArr[Math.floor(Math.random() * upperCasedCharactersArr.length)];
          resultOne.push(randomUppercase);
-         console.log(resultOne.join(''));
        }
+       var one = console.log(resultOne.join(''));
    }
 
 
@@ -212,8 +258,8 @@ else if (((upperCase || upperCaseError) === 'yes') && ((lowerCase || lowerCaseEr
  
       var randomUpperAndLower = (upperCasedCharactersArr.concat(lowerCasedCharactersArr))[Math.floor(Math.random() * 51)];
       resultTwo.push(randomUpperAndLower);
-      console.log(resultTwo.join(''));
     }
+    var two = console.log(resultTwo.join(''));
    }
 
 
@@ -224,8 +270,8 @@ else if (((upperCase || upperCaseError) === 'yes') && ((lowerCase || lowerCaseEr
  
       var randomUpperAndLowerAndSpec = (upperCasedCharactersArr.concat(lowerCasedCharactersArr, specialCharactersArr))[Math.floor(Math.random() * 74)];
       resultThree.push(randomUpperAndLowerAndSpec);
-      console.log(resultThree.join(''));
     }
+    var three = console.log(resultThree.join(''));
    }
 
 
@@ -235,22 +281,69 @@ else if (((upperCase || upperCaseError) === 'no') && ((lowerCase || lowerCaseErr
  
       var randomNumber = numbersArr[Math.floor(Math.random() * 10)];
       resultFour.push(randomNumber);
-      console.log(resultFour.join(''));
     }
+    var four = console.log(resultFour.join(''));
    }
 
 
 
-// else if (((upperCase || upperCaseError) === 'yes') && ((lowerCase || lowerCaseError) === 'yes') && ((specialChar || specialError) === 'yes') && ((numbersPrompt || numbersError) === 'no')) {
+else if (((upperCase || upperCaseError) === 'no') && ((lowerCase || lowerCaseError) === 'no') && ((specialChar || specialError) === 'yes') && ((numbersPrompt || numbersError) === 'yes')) {
 
-//     for (var i = 0; i < lengthOfPassword; i++) {
+    for (var i = 0; i < lengthOfPassword; i++) {
  
-//       var randomUpperAndLowerAndSpec = (upperCasedCharactersArr.concat(lowerCasedCharactersArr, specialCharactersArr))[Math.floor(Math.random() * 75)];
-//       resultThree.push(randomUpperAndLowerAndSpec);
-//       console.log(resultThree.join(''));
-//     }
-//    }
+      var randomNumberAndSpec = (numbersArr.concat(specialCharactersArr))[Math.floor(Math.random() * 32)];
+      resultFive.push(randomNumberAndSpec);
+    }
+    var five = console.log(resultFive.join(''));
+   }
 
+
+
+   else if (((upperCase || upperCaseError) === 'no') && ((lowerCase || lowerCaseError) === 'yes') && ((specialChar || specialError) === 'yes') && ((numbersPrompt || numbersError) === 'yes')) {
+
+    for (var i = 0; i < lengthOfPassword; i++) {
+ 
+      var randomNumberAndSpecAndLower = (numbersArr.concat(specialCharactersArr, lowerCasedCharactersArr))[Math.floor(Math.random() * 58)];
+      resultSix.push(randomNumberAndSpecAndLower);
+    }
+    var six = console.log(resultSix.join(''));
+   }
+
+
+   else if (((upperCase || upperCaseError) === 'yes') && ((lowerCase || lowerCaseError) === 'no') && ((specialChar || specialError) === 'no') && ((numbersPrompt || numbersError) === 'yes')) {
+
+    for (var i = 0; i < lengthOfPassword; i++) {
+ 
+      var randomNumberAndUpper = (numbersArr.concat(upperCasedCharactersArr))[Math.floor(Math.random() * 35)];
+      resultSeven.push(randomNumberAndUpper);
+    }
+    var seven = console.log(resultSeven.join(''));
+   }
+
+
+   else if (((upperCase || upperCaseError) === 'yes') && ((lowerCase || lowerCaseError) === 'yes') && ((specialChar || specialError) === 'no') && ((numbersPrompt || numbersError) === 'yes')) {
+
+    for (var i = 0; i < lengthOfPassword; i++) {
+ 
+      var randomNumberAndUpperAndLower = (numbersArr.concat(upperCasedCharactersArr, lowerCasedCharactersArr))[Math.floor(Math.random() * 61)];
+      resultEight.push(randomNumberAndUpperAndLower);
+    }
+    var eight = console.log(resultEight.join(''));
+   }
+
+   else if (((upperCase || upperCaseError) === 'no') && ((lowerCase || lowerCaseError) === 'yes') && ((specialChar || specialError) === 'no') && ((numbersPrompt || numbersError) === 'yes')) {
+
+    for (var i = 0; i < lengthOfPassword; i++) {
+ 
+      var randomNumberAndLower = (numbersArr.concat(lowerCasedCharactersArr))[Math.floor(Math.random() * 35)];
+      resultNine.push(randomNumberAndLower);
+    }
+    var nine = console.log(resultNine.join(''));
+   }
+
+   
+
+   
 
 
 
