@@ -341,6 +341,50 @@ else if (((upperCase || upperCaseError) === 'no') && ((lowerCase || lowerCaseErr
     var nine = console.log(resultNine.join(''));
    }
 
+   else if (((upperCase || upperCaseError) === 'yes') && ((lowerCase || lowerCaseError) === 'no') && ((specialChar || specialError) === 'yes') && ((numbersPrompt || numbersError) === 'no')) {
+
+    for (var i = 0; i < lengthOfPassword; i++) {
+ 
+      var randomUpperAndSpec = (upperCasedCharactersArr.concat(specialCharactersArr))[Math.floor(Math.random() * 48)];
+      resultTen.push(randomUpperAndSpec);
+    }
+    var ten = console.log(resultTen.join(''));
+   }
+
+
+   
+   else if (((upperCase || upperCaseError) === 'no') && ((lowerCase || lowerCaseError) === 'no') && ((specialChar || specialError) === 'yes') && ((numbersPrompt || numbersError) === 'no')) {
+
+    for (var i = 0; i < lengthOfPassword; i++) {
+ 
+      var randomSpec = (specialCharactersArr)[Math.floor(Math.random() * 22)];
+      resultEleven.push(randomSpec);
+    }
+    var eleven = console.log(resultEleven.join(''));
+   }
+
+   else if (((upperCase || upperCaseError) === 'no') && ((lowerCase || lowerCaseError) === 'yes') && ((specialChar || specialError) === 'no') && ((numbersPrompt || numbersError) === 'no')) {
+
+    for (var i = 0; i < lengthOfPassword; i++) {
+ 
+      var randomLower = (lowerCasedCharactersArr)[Math.floor(Math.random() * lowerCasedCharactersArr.length)];
+      resultTwelve.push(randomLower);
+    }
+    var twelve = console.log(resultTwelve.join(''));
+   }
+
+   else if (((upperCase || upperCaseError) === 'yes') && ((lowerCase || lowerCaseError) === 'no') && ((specialChar || specialError) === 'yes') && ((numbersPrompt || numbersError) === 'yes')) {
+
+    for (var i = 0; i < lengthOfPassword; i++) {
+ 
+      var randomNumberAndUpperAndSpec = (numbersArr.concat(upperCasedCharactersArr, specialCharactersArr))[Math.floor(Math.random() * 58)];
+      resultThirteen.push(randomNumberAndUpperAndSpec);
+    }
+    var thirteen = console.log(resultThirteen.join(''));
+   }
+
+
+
    
 
    

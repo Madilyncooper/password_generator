@@ -16,7 +16,7 @@ Project was created with:
 ## Installation
 
 To run this project, pull it from Github to your local machine using your terminal.
-
+   
 #### Steps: 
 
 1. Open Github
