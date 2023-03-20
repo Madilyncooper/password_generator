@@ -33,4 +33,5 @@ $ git clone <paste the copied link>
 https://madilyncooper.github.io/password_generator/
 
  ## Screenshot:
-<img width="906" alt="Screen Shot 2023-03-13 at 9 51 21 PM" src="https://user-images.githubusercontent.com/124405920/224896498-de4d6821-8bd4-4602-921a-0b1d92ffa528.png">
+<img width="881" alt="Screen Shot 2023-03-20 at 12 36 45 PM" src="https://user-images.githubusercontent.com/124405920/226447537-1d21302b-ad1f-4fa4-a092-29be8d68681e.png">
+<img width="725" alt="Screen Shot 2023-03-20 at 12 37 02 PM" src="https://user-images.githubusercontent.com/124405920/226447615-0ec221a0-a133-4ed7-a2bb-b69c79ba5963.png">
